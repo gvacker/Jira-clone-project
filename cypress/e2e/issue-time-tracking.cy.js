@@ -5,7 +5,7 @@ const openIssue = () => cy.contains("Bug").click();
 
 const originalEstimateHours = 10;
 
-describe("Issue comments creating, editing and deleting", () => {
+describe("Issue time tracking and logging", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.url()
@@ -23,7 +23,7 @@ describe("Issue comments creating, editing and deleting", () => {
     removeTimeEstimation();
   });
 
-  it.only("Log and remove logged time", () => {
+  it("Log and remove logged time", () => {
     const timeSpent = 2;
     const timeRemaining = 5;
 
